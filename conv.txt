@@ -1,0 +1,140 @@
+{
+    "info": {
+        "_postman_id": "9d97ed33-6536-449a-91c0-4f29c9da5d0a",
+        "name": "express-sequelize-api-boilerplate",
+        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Admin",
+            "item": [
+                {
+                    "name": "All Users",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "type": "text",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "x-token",
+                                "type": "text",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDE5LTA1LTI3VDA3OjU0OjQ4LjYyOVoifSwiaWF0IjoxNTU4OTQzNjg4fQ.tS-2E88lIzqusFQQthjqN7nMK1ecCuVyJeSB9_Gmk_g"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": ""
+                        },
+                        "url": "{{host}}/api/admin/allUsers"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n\t\"email\": \"admin@gmail.com\",\n\t\"password\": \"123456\"\n}"
+                },
+                "url": "{{host}}/pub/login"
+            },
+            "response": []
+        },
+        {
+            "name": "Register",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "type": "text",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n\t\"firstName\": \"New\",\n\t\"lastName\" : \"User\",\n\t\"email\": \"newuser@gmail.com\",\n\t\"password\": \"123456\",\n\t\"code\": \"123\"\n}"
+                },
+                "url": "{{host}}/pub/register"
+            },
+            "response": []
+        },
+        {
+            "name": "My Profile",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "type": "text",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "x-token",
+                        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDE5LTA1LTI3VDA3OjU0OjQ4LjYyOVoifSwiaWF0IjoxNTU4OTQzNjg4fQ.tS-2E88lIzqusFQQthjqN7nMK1ecCuVyJeSB9_Gmk_g",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": ""
+                },
+                "url": "{{host}}/api/me"
+            },
+            "response": []
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "host",
+            "value": "localhost:3000"
+        },
+        {
+            "key": "token",
+            "value": "aasd"
+        }
+    ]
+}
